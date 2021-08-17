@@ -24,3 +24,4 @@ def questions():
 
 # this will keep track of user responses
 responses = []
+x = 'hello'
