@@ -9,7 +9,8 @@ app.config['SECRET_KEY'] = "oh-so-secret"
 
 debug = DebugToolbarExtension(app)
 satis = surveys['satisfaction']
-choice = satis.questions[0].choices
+all_questions = satis.questions
+choices = satis.questions[0].choices
 
 # this will keep track of user responses
 responses = []
@@ -17,9 +18,10 @@ responses = []
 
 @app.route('/')
 def survey():
-    return render_template("home.html", satis=satis)
+    return render_template("home.html", satis=satis, choice=choices, question=all_questions)
 
 
 @app.route('/questions/0', methods=["POST"])
 def questions():
-    return render_template("base.html", satis=satis)
+
+    return render_template("base.html", satis=satis, choice=choices, question=all_questions)
