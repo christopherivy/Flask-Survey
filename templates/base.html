@@ -5,11 +5,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 	</head>
+
 	<body>
 		<h1>Q1: {{satis.questions[0].question}}</h1>
-		{% for choice in choice%}
-		<input type="radio" name="radio" id="" />
-		<label for="radio">{{choice}}</label>
-		{% endfor %}
+		{% for choice in choice%} <input type="radio" name="radio" id="" />
+		<label for="radio">{{choice}}</label> {% endfor %}
 	</body>
 </html>

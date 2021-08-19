@@ -18,10 +18,9 @@ responses = []
 
 @app.route('/')
 def survey():
-    return render_template("home.html", satis=satis, choice=choices, question=all_questions)
+    return render_template("home.html", satis=satis, choice=choices)
 
 
-@app.route('/questions/0', methods=["POST"])
+@app.route('/questions/0', methods=["GET", "POST"])
 def questions():
-
-    return render_template("base.html", satis=satis, choice=choices, question=all_questions)
+    return render_template("base.html", satis=satis, choice=choices)
