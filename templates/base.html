@@ -7,8 +7,13 @@
 	</head>
 
 	<body>
-		<h1>Q1: {{satis.questions[0].question}}</h1>
+		<h1>{{satis.questions[0].question}}</h1>
 		{% for choice in choice%} <input type="radio" name="radio" id="" />
-		<label for="radio">{{choice}}</label> {% endfor %}
+		<label for="radio">{{choice}}</label>
+		{% endfor %}
 	</body>
+	<br />
+	<form action="/questions/1" method="POST">
+		<button>Continue</button>
+	</form>
 </html>

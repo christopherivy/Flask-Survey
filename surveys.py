@@ -4,6 +4,7 @@ class Question:
     def __init__(self, question, choices=None, allow_text=False):
         """Create question (assume Yes/No for choices."""
 
+        # if the question has no choices, defaults to yes/no
         if not choices:
             choices = ["Yes", "No"]
 
@@ -29,7 +30,7 @@ satisfaction_survey = Survey(
     [
         Question("Have you shopped here before?"),
         Question("Did someone else shop with you today?"),
-        Question("On average, how much do you spend a month on frisbees?",
+        Question("On averae, how much do you spend a month on frisbees?",
                  ["Less than $10,000", "$10,000 or more"]),
         Question("Are you likely to shop here again?"),
     ])
