@@ -1,19 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Flask Survey</title>
 	</head>
 
-	<body>
-		<h1>{{satis.questions[0].question}}</h1>
-		{% for choice in choice%} <input type="radio" name="radio" id="" />
-		<label for="radio">{{choice}}</label>
-		{% endfor %}
+	<body> {% for msg in get_flashed_messages() %} <p>{{ msg }}</p> {% endfor %} {% block content %} {% endblock %}
 	</body>
-	<br />
-	<form action="/questions/1" method="POST">
-		<button>Continue</button>
-	</form>
+
 </html>

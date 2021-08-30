@@ -1,0 +1,4 @@
+{% extends 'base.html' %} {% block content %} <h1>Thanks for completing this survey!</h1>
+<p>Your answers were: {{responses}}</p>
+<form action="/begin" method="POST">
+	<button>Restart!</button> {% endblock %} </form>

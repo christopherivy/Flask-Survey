@@ -1,0 +1,15 @@
+<!-- this is extending the base.html template file --> {% extends 'base.html' %}
+<!-- block content is the start of the html using jinja --> {% block content %}
+<!-- I put this part here (line 8) -->
+<p>Question Number {{current_ques}} of {{remaining_ques}}:</p>
+<h1>{{ question.question }}</h1>
+<form action="/answer" method="POST">
+	<!-- looping over choice in question.choices --> {% for choice in question.choices %}
+	<!--  -->
+	<input type="radio" id="{{choice}}" name="answer" value="{{ choice }}">
+	<label for="{{choice}}">{{choice}}</label>
+	</p>
+	<!-- end the for loop --> {% endfor %} </select>
+	<button>Continue</button>
+</form>
+<!-- endblock is the end of the html using jinja --> {% endblock %}
